@@ -59,7 +59,7 @@ width: 175px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 
@@ -69,12 +69,12 @@ width: 175px;
     background-color: whitesmoke;
     color: black; 
     display: inline;
-    margin-left: 10px;
+    margin-left: 8px;
   }
 .pic
   {
     width: 150px;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
   }
 
 
