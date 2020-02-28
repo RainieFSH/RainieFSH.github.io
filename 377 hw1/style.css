@@ -1,5 +1,5 @@
 .header {
-    background-color: gray;
+    background-color: lightcoral;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -34,6 +34,10 @@ width: 175px;
   text-align: center;
     display: inline-block;
     flex: 0 1 auto;
+    border: 9px solid transparent;
+    background-color: whitesmoke;
+    color: black; 
+    display: inline;
 }
 
 .pic{
@@ -46,7 +50,6 @@ width: 175px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
   max-width: 960px;
 
 }
@@ -55,24 +58,29 @@ width: 175px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
- 
-
+  justify-content: center;
+  margin-top: 8px;
 }
 
 
 .two
   {
     border: 9px solid transparent;
+    background-color: whitesmoke;
+    color: black; 
+    display: inline;
+    margin-left: 8px;
   }
 .pic
   {
-    width: 200px;
+    width: 150px;
+    margin-bottom: 60px;
   }
 
 
 
-.two jobtitle{
-  font-family: FredokaOne;
+.jobtitle{
+  font-family: 'FredokaOne', cursive;
 }
 
 .jobdes{
@@ -80,7 +88,9 @@ width: 175px;
 
 .jobduty{}
 
-
+body {
+  background-color: lightpink;
+}
 
 
 
