@@ -1,85 +1,83 @@
-body {
-  margin: 20px;
-}
-
-.sidebar {
-  grid-area: sidebar;
-}
-
-.content {
-  grid-area: content;
-  position: relative;
-}
-
 .header {
-  grid-area: header;
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
 }
 
+.header h1{
+  color: black;
+  vertical-align: middle; 
+  display: inline-block;
+  }
 
-.wrapper {
-        display: grid;
-    grid-gap: 90px;
-        grid-template-columns: 200px 200px 200px;
-        grid-template-areas:
-        color: #gray;
-        display: block;
-      }
-.header {    
-      background-color: pink;
-      display: block;
-      height: 100px;
-      padding-top: 90px;
-      display: flex;
-}
 .header img
 {
-  display: block;
-  height: 100px;
-  padding-top: 1px;
-  float: right;
+  width: 100px;
+}
+
+
+element.style {
+  flex: 0 1 auto;
+  width: 175px;
+}
+.one{
+text-align: left;
+flex: 0 1 auto;
+width: 175px;
+}
+
+.one p{
+  text-align: center;
+    display: inline-block;
+    flex: 0 1 auto;
+}
+
+.pic{
+  width: inherit;
 }
 .container
 {
-  height: 100px;
-  padding-top: 90px;
-  display: left;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 960px;
 
 }
-.pic
-{float:left;
-  width: 100px;
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+ 
+
 }
-.one
-{
-  float:center;
-  text-align:left ;
-  width: 900px;
-}
+
 
 .two
-{float: right;
-  padding-top: 90px;
-  width: 400px;
-  height: 450px;
-  border: 9px solid pink;
-}
-.three
-{float: left;
-  width: 80px;
-  height: 9px;
-  text-align:bottom;
-  border: 9px blue;}
+  {
+    border: 9px solid transparent;
+  }
+.pic
+  {
+    width: 200px;
+  }
 
-.box {
-  background-color: #444;
-  color: rgb(206, 20, 20);
-  border-radius: 5px;
-  padding: 50px;
-  font-size: 150%;
+
+
+.jobtitle{}
+
+.jobdes{
 }
 
-.header,
-.footer {
-  background-color: #999;
-}
+.jobduty{}
+
+
+
+
 
