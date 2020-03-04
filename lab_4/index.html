@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Prof A's Demo Page</title>
+    <title>Rainie's Lab 4</title>
     <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
 
@@ -13,13 +13,22 @@
           Click me to make a change
         </button>
         <div class="content">
-          <p>
-            Retro fam narwhal hoodie meggings viral bushwick yr chartreuse.
+          <div class="P1">
+            My name has 10 characters.Retro fam narwhal hoodie meggings viral bushwick yr chartreuse.
             Chartreuse seitan banh mi selfies, woke ennui venmo craft beer. Air
             plant tumeric retro DIY iPhone poutine. +1 gastropub chillwave,
             cronut glossier pork belly tacos poke next level fanny pack vegan
             jianbing lo-fi.
-          </p>
+          </div>
+          <div class="P2">
+            The third character in my name is I.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec 
+            odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla 
+            quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent 
+            mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
+            Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad 
+            litora torquent per conubia nostra, per inceptos himenaeos. 
+            ENG.
+          </div>
         </div>
         <div class="footer"></div>
       </div>
@@ -29,6 +38,11 @@
         const content = document.querySelector(".content");
         content.innerHTML = "Hello world";
       }
+        const myHeading = document.querySelector(".header");
+        let Fn = "Rainie";
+        let ln = "Feng";
+        let len = Fn.length + ln.length;
+        myHeading.textContent = Fn + ln + len;
     </script>
   </body>
 </html>
