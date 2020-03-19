@@ -17,7 +17,7 @@ let el = document.querySelector('button');
  let line = document.createElement('li'); 
  let name = element['name']; 
  let code = element['code'].bold(); 
- line.innerHTML= code + ' ' + name; 
+ line.innerHTML= code + ' ' + name;   
  country.appendChild(line) 
    }); 
  content.appendChild(country); 
