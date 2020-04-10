@@ -20,8 +20,21 @@
         .then((data) => data.json()) // this is an "implicit return" - we're returning the results of the Fetch request to the next step.
         .then((data) => { // this is an explicit return. If I want my information to go further, I'll need to use the "return" keyword before the brackets close
           console.log(data);
-          // return data; // <- this will pass the data to the next "then" statement when I'm ready.
+          return data; // <- this will pass the data to the next "then" statement when I'm ready.
         })
+        .then((data)=>{
+          function groupBy(objectArray, category) {
+            return objectArray.reduce(function (acc, obj) {
+              let key = obj[category];
+              if (!acc[key]) {
+                acc[key] = [];
+              }
+              acc[key].push(obj);
+              return acc
+            }, {})
+          }
+
+
     </script>
   </body>
 </html>
