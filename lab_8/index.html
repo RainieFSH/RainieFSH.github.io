@@ -10,7 +10,7 @@
       <div class="wrapper">
         <div class="header">Frontend Libraries: Charts Lab</div>
         <div class="content">
-          When your lab is done, this should be replaced with a useful chart full of food data.
+          <div id="chartContainer"></div>
         </div>
         <div class="footer">Let's eat out in the future!</div>
       </div>
@@ -43,7 +43,59 @@
               });
             return keyLen;
           }
+          let groupedData = groupBy(data,'category');
+          let dataKeys =Object.keys(groupedData);
 
+          let sorted = sortData(groupedData,dataKeys);
+          return sorted;
+        })
+        .then((sdata)=>{
+          let points =[]
+
+
+          function generateDataPoints(){
+            for(let i = 0; i < sdata.length;i++){
+              points.push({
+                y: sdata[i][1],
+                label: sdata[i][0]
+              });
+            }
+          };
+          generateDataPoints();
+          let chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            colorSet:"colorSet2",
+            title: {
+              text: "Let's Find Somewhere To Eat"
+            },
+            axisX: {
+              interval: 1,
+              labelFontSize:9,
+              labelFontWeight:"bold"
+            },
+            axisY: {
+              scaleBreaks: {
+                type: "zigzag",   
+                customBreaks: [{
+                  startValue: 20,
+                  endValue: 30
+                  },
+                  {
+                    startValue: 60,
+                    endValue: 120
+                  }
+              ]},
+            },
+            data: [{
+                    type: "pie",
+                    dataPoints: points
+            }],
+            height: 470
+          });
+          chart.render();
+          
+        }                            
+      )
 
     </script>
   </body>
