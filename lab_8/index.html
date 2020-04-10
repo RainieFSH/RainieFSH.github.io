@@ -33,6 +33,16 @@
               return acc
             }, {})
           }
+          function sortData(grouped, keys){
+            let keyLen =[]
+            keys.forEach(function(y){
+              keyLen.push([y,groupedData[y].length]);
+              })
+            keyLen.sort(function(a, b) {
+                return b[1] - a[1];
+              });
+            return keyLen;
+          }
 
 
     </script>
