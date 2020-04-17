@@ -48,8 +48,18 @@ function processDataForFrontEnd(req, res) {
         keyLen.sort((a, b) => b[1] - a[1]);
         return keyLen;
       }
-
-
+      const groupedData = groupBy(data, 'category');
+      const dataKeys = Object.keys(groupedData);
+      const points = [];
+      const sorted = sortData(groupedData, dataKeys);
+      for (let i = 0; i < sorted.length; i++) {
+        points.push({
+          y: sorted[i][1],
+          label: sorted[i][0]
+        });
+      }
+      console.log(points);
+      res.send({ points: points });
 
         console.log(data);
         res.send({ data: data }); // here's where we return data to the front end
