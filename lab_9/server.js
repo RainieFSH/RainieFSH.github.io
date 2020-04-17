@@ -22,7 +22,7 @@ app.use(express.static('public'));
 
 
 function processDataForFrontEnd(req, res) {
-  const baseURL = ''; // Enter the URL for the data you would like to retrieve here
+  const baseURL = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json'; // Enter the URL for the data you would like to retrieve here
 
   // Your Fetch API call starts here
   // Note that at no point do you "return" anything from this function -
