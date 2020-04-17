@@ -30,6 +30,15 @@ function processDataForFrontEnd(req, res) {
     fetch(baseURL)
       .then((r) => r.json())
       .then((data) => {
+        function groupBy(objectArray, category) {
+          return objectArray.reduce((acc, obj) => {
+            const key = obj[category];
+            if (!acc[key]) {
+              acc[key] = [];
+          }
+
+
+
         console.log(data);
         res.send({ data: data }); // here's where we return data to the front end
       })
