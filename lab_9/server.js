@@ -36,6 +36,18 @@ function processDataForFrontEnd(req, res) {
             if (!acc[key]) {
               acc[key] = [];
           }
+          acc[key].push(obj);
+          return acc;
+        }, {});
+      }
+      function sortData(grouped, keys) {
+        const keyLen = [];
+        keys.forEach((y) => {
+          keyLen.push([y, groupedData[y].length]);
+        });
+        keyLen.sort((a, b) => b[1] - a[1]);
+        return keyLen;
+      }
 
 
 
