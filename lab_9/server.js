@@ -36,6 +36,8 @@ function processDataForFrontEnd(req, res) {
             if (!acc[key]) {
               acc[key] = [];
           }
+
+
           acc[key].push(obj);
           return acc;
         }, {});
@@ -48,6 +50,10 @@ function processDataForFrontEnd(req, res) {
         keyLen.sort((a, b) => b[1] - a[1]);
         return keyLen;
       }
+
+
+
+
       const groupedData = groupBy(data, 'category');
       const dataKeys = Object.keys(groupedData);
       const points = [];
@@ -58,9 +64,12 @@ function processDataForFrontEnd(req, res) {
           label: sorted[i][0]
         });
       }
+
+
+
+      
       console.log(points);
       res.send({ points: points });
-
         console.log(data);
         res.send({ data: data }); // here's where we return data to the front end
       })
