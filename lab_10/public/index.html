@@ -49,9 +49,43 @@
             target.append(`${txtresponse}`);
           });
       }
+      function Records (x) {
+        const btn = document.querySelector('#getBtn');
+        const container = document.querySelector('.container');
+        x.preDefault();
+        fetch('/api', {
+          method: 'GET'
+        })
+          .then((data) => data.json())
+          .then((data) => {
+            const recnum = Object.keys(data.records).length;
+            console.log(recnum);
+            btn.setAttribute('disabled', true);
+            const display = document.createElement('ol');
+            container.appendChild(display);
+            for (let i = 0; i < recnum; i++) {
+              const record = document.createElement('ol');
+              record.setAttribute('type', 'I');
+              const name = document.createElement('li');
+              const zip = document.createElement('li');
+              const interest = document.createElement('li');
+              record.textContent = `Record #: ${i + 1}`;
+              container.appendChild(record);
+              name.textContent = `Name: ${data.records[i].name}`;
+              record.appendChild(name);
+              zip.textContent = `Zip Code: ${data.records[i].zip}`;
+              record.appendChild(zip);
+              interest.textContent = `Interests: ${data.records[i].interest}`;
+              record.appendChild(interest);
+            }
+          });
+      }
 
       const formBtn = document.querySelector("#formBtn");
       formBtn.addEventListener("click", sendForm);
+
+      const getBtn = document.querySelector('#getBtn');
+      getBtn.addEventListener('click', getRecords);
     </script>
   </body>
 </html>
